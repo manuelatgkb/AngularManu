@@ -9,3 +9,7 @@ main{
 .mb-3{
   text-align: left;
 }
+h2{
+  text-align: center;
+  color: rgb(255, 255, 255);
+}

@@ -3,5 +3,14 @@ main{
   padding: 5%;
   margin: auto;
   text-align: center;
-  background: rgb(255, 255, 255);
+  background: rgb(83, 175, 228);
+}
+
+h2{
+  text-align: center;
+  color: rgb(214, 214, 235);
+}
+
+table{
+  background-color: rgb(40, 90, 92);
 }

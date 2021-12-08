@@ -1,3 +1,5 @@
+import { TiposClienteComponent } from './../tipocliente-cadastro/tipos-cliente.component';
+import { ClienteService } from './../services/cliente.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClienteCadastroComponent implements OnInit {
 
-  constructor() { }
+  cliente = {} as ClienteService;
 
+  constructor(private clienteService:ClienteService) {
+
+  }
   ngOnInit(): void {
+  }
+  salvar(){
+    this.clienteService.salvar(this.cliente).subscribe((msg)=>{
+      console.log(msg);
+      this.limpar();
+    });
+  }
+
+  private limpar(){
+    this.cliente = {} as ClienteService;
   }
 
 }
